@@ -22,8 +22,8 @@ export default {
   data() {
     return {
       form: {
-        username: '',
-        password: ''
+        username: 'admin',
+        password: '123456'
       },
       rules: {
         username: [
@@ -44,7 +44,7 @@ export default {
         const { data: res } = await this.$http.post('/login', this.form)
         if (res.meta.status !== 200) return this.$message.error('登录失败')
         this.$message.success('登录成功~')
-        window.sessionStorage.setItem('token', res.data.token)
+        window.sessionStorage.setItem('token', res.data.token) // 存储token
         return this.$router.push('/home')
       })
     }
