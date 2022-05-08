@@ -1,17 +1,14 @@
 <template>
   <div id="app">
-    app根组件
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 export default {
   name: 'app',
-  components: {
-    
-  }
+  components: {}
 }
 </script>
 
-<style>
-</style>
+<style></style>
